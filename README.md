@@ -25,8 +25,9 @@ First of all it's important to be aware that there are multiple versions of this
 
 When opening the motor control unit, it should have a main board with 2 small daughter boards soldered on using through-hole headers. One of these boards has the WBR3 soldered to it, the other is the RF receiver for the remote.
 
-<img src="https://github.com/user-attachments/assets/ce8caa76-2155-4edd-ba73-7b7db52eb295" width="500" />
-The image above shows the motor control unit with the removed daughter board.
+<img src="https://github.com/user-attachments/assets/ce8caa76-2155-4edd-ba73-7b7db52eb295" width="250" />
+<img src="https://github.com/user-attachments/assets/3d6e0a4e-d0f2-47d6-b297-649c8fe9524f" width="250" />
 
-<img src="https://github.com/user-attachments/assets/3d6e0a4e-d0f2-47d6-b297-649c8fe9524f" width="500" />
-The image above shows the daughter board, the removed WBR3 and pin-compatible ESP-12F
+The first image shows the motor control unit with the removed daughter board.
+
+The second image shows the daughter board, the removed WBR3 and pin-compatible ESP-12F.
