@@ -1,0 +1,151 @@
+{
+  "modelId": "f08l5s",
+  "services": [
+    {
+      "actions": [],
+      "code": "",
+      "description": "",
+      "events": [],
+      "name": "默认服务",
+      "properties": [
+        {
+          "abilityId": 20,
+          "accessMode": "rw",
+          "code": "switch_led",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_power",
+            "attribute": "1667"
+          },
+          "name": "灯开关",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 21,
+          "accessMode": "rw",
+          "code": "work_mode",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_mode",
+            "attribute": "1664"
+          },
+          "name": "灯模式",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "white",
+              "colour",
+              "scene",
+              "music"
+            ]
+          }
+        },
+        {
+          "abilityId": 23,
+          "accessMode": "rw",
+          "code": "temp_value",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_half",
+            "attribute": "1664"
+          },
+          "name": "冷暖值",
+          "typeSpec": {
+            "type": "value",
+            "max": 1000,
+            "min": 0,
+            "scale": 0,
+            "step": 1
+          }
+        },
+        {
+          "abilityId": 25,
+          "accessMode": "rw",
+          "code": "scene_data",
+          "description": "用于切换、编辑场景",
+          "extensions": {
+            "iconName": "icon-shoucang",
+            "attribute": "1664"
+          },
+          "name": "场景",
+          "typeSpec": {
+            "type": "string",
+            "maxlen": 255
+          }
+        },
+        {
+          "abilityId": 60,
+          "accessMode": "rw",
+          "code": "fan_switch",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_power2",
+            "attribute": "1664"
+          },
+          "name": "风扇开关",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 62,
+          "accessMode": "rw",
+          "code": "fan_speed",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-FanSpeed",
+            "attribute": "1664"
+          },
+          "name": "风速",
+          "typeSpec": {
+            "type": "value",
+            "max": 6,
+            "min": 1,
+            "scale": 0,
+            "step": 1,
+            "unit": ""
+          }
+        },
+        {
+          "abilityId": 63,
+          "accessMode": "rw",
+          "code": "fan_direction",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_mode",
+            "attribute": "1664"
+          },
+          "name": "风向",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "forward",
+              "reverse"
+            ]
+          }
+        },
+        {
+          "abilityId": 64,
+          "accessMode": "rw",
+          "code": "fan_countdown_left",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_time3",
+            "attribute": "1664"
+          },
+          "name": "风扇倒计时",
+          "typeSpec": {
+            "type": "value",
+            "max": 540,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "min"
+          }
+        }
+      ]
+    }
+  ]
+}
