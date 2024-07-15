@@ -50,3 +50,11 @@ After reassembling everything, the fan should start and the ESPHome dashboard sh
 
 ## Home Assitant
 If the ESPHome integration is configured in home assistant the device should be auto discovered.
+
+## Known Issues
+
+### Fan timer
+Datapoint 64 can be used to set the countdown timer, the actual countdown is handled by the motor control unit.
+Currently the fan turns off when this timer expires, but there is no feedback to ESPHome.
+After the fan turns off, ESPHome can't issue any further commands. Currently, the only way to get the fan working again is to turn it on with the RF remote after the timer expires. After doing so ESPHome works as expected again.
+Since this is a hardware issue with the motor control unit, it's probably best to not use this datapoint at all and build a custom timer script in ESPHome.
