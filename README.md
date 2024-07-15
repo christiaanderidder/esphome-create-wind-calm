@@ -47,14 +47,16 @@ When placing the ESP12-F the following connections need to be made:
 - VCC to VCC
 - GND to GND
 
-Some people opted to desolder and rewire the RF receiver directly to the ESP-12F to keep the remote working as expected. However, I found out that this is not neccesary, the motor control unit already informs the ESP-12F when a change is made using the remote, but [a missing feature in ESPHome](https://github.com/esphome/esphome/pull/6980) prevented it from being picked up. The configuration provided in this repository uses a custom fork for now, the fix is expected to be released in ESPHome 2024.7.
-
+Some people opted to desolder and rewire the RF receiver directly to the ESP-12F to keep the remote working as expected. However, I found out that this is not neccesary, the motor control unit already informs the ESP-12F when a change is made using the remote.
 After reassembling everything, the fan should start and the ESPHome dashboard should be reachable over the network.
 
 ## Home Assitant
 If the ESPHome integration is configured in home assistant the device should be auto discovered.
 
 ## Known Issues
+
+### Fan speed not working
+Multiple people ran into issues setting the fan speed, because the tuya device does not correctly report all data points to ESPHome on startup. I found out that this was caused by ESPHome not processing all information being sent by the tuya device and managed to fix this by making [a small change to ESPHome](https://github.com/esphome/esphome/pull/6980). The configuration provided in this repository uses a custom fork of ESPHome including this fix for now, the fix is expected to be released in ESPHome 2024.7.
 
 ### Fan timer
 Datapoint 64 can be used to set the countdown timer, the actual countdown is handled by the motor control unit.
