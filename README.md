@@ -1,5 +1,6 @@
 # CREATE WIND CALM ceiling fan ESPHome mod
 This repository contains a guide and configuration files for converting the Create Wind Calm fan from Tuya Smart to ESPHome.
+For more information on this fan and some experiences using it, see [https://github.com/velzend/create_ikohs_fan](https://github.com/velzend/create_ikohs_fan).
 Most of the information in this guide came from [an issue on velzend's git repo](https://github.com/velzend/create_ikohs_fan/issues/7) and my own experiences.
 
 **I am not resposible for any damage you might do to your device, nor will I provide any support besides the information given below**
