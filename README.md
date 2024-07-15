@@ -23,7 +23,11 @@ However, the [WBR3](https://developer.tuya.com/en/docs/iot/wbr3-module-datasheet
 ## Replacing the WBR3 with ESP-12F
 First of all it's important to be aware that there are multiple versions of this fan. Some variants have a dimmable light, while my fan has not. The exact motor control unit and RF remote used also seem to differ between units. This is most likely due to CREATE just using any parts available off the shelve.
 
+Make sure to flash your ESP-12F with ESPHome before continuing. In my case I used a [developer board](https://www.tinytronics.nl/en/development-boards/accessories/adapter-boards/development-board-for-esp8266-wi-fi-module) which makes this very quick and easy without any soldering. 
+The [esphome](esphome) folder in this repository contains the ESPHome yaml for the fan, carefully check this file and make sure you set up the correct secrets and IP addresses.
+
 When opening the motor control unit, it should have a main board with 2 small daughter boards soldered on using through-hole headers. One of these boards has the WBR3 soldered to it, the other is the RF receiver for the remote.
+The WBR3 daughter board can easily be desoldered to make working on replacing the WBR3 a little easier. This is also the perfect time to remove the buzzer (or put a small amount of glue in the top hole) to get rid of the annoyingly loud beeping sound the fan makes.
 
 <img src="https://github.com/user-attachments/assets/ce8caa76-2155-4edd-ba73-7b7db52eb295" width="250" />
 <img src="https://github.com/user-attachments/assets/3d6e0a4e-d0f2-47d6-b297-649c8fe9524f" width="250" />
@@ -31,3 +35,18 @@ When opening the motor control unit, it should have a main board with 2 small da
 The first image shows the motor control unit with the removed daughter board.
 
 The second image shows the daughter board, the removed WBR3 and pin-compatible ESP-12F.
+
+When placing the ESP12-F the following connections need to be made:
+- TXD to TXD
+- RXD to RXD
+- GPIO15 to GND (set correct boot mode)
+- EN to VCC (always enable)
+- VCC to VCC
+- GND to GND
+
+Some people opted to desolder and rewire the RF receiver directly to the ESP-12F to keep the remote working as expected. However, I found out that this is not neccesary, the motor control unit already informs the ESP-12F when a change is made using the remote, but [a missing feature in ESPHome](https://github.com/esphome/esphome/pull/6980) prevented it from being picked up. The configuration provided in this repository uses a custom fork for now, the fix is expected to be released in ESPHome 2024.7.
+
+After reassembling everything, the fan should start and the ESPHome dashboard should be reachable over the network.
+
+## Home Assitant
+If the ESPHome integration is configured in home assistant the device should be auto discovered.
