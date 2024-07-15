@@ -10,6 +10,9 @@ For Tuya devices there are generally two ways to make the device local only:
 - Using local integrations that speak the tuya protocol like [localtuya](https://github.com/rospogrigio/localtuya), [tuya-local](https://github.com/make-all/tuya-local), [tinytuya](https://github.com/jasonacox/tinytuya) etc.
 - By modding the device to use ESPHome
 
+## Tuya Datapoints
+Tuya devices expose a number of data points which represent different features of a tuya device. These are relevant for either type of integration. The data points for the CREATE WIND CALM can be found in the [tuya](tuya) folder in this repository.
+
 ## Local integrations
 While these generally work, they have a big downside. It requires registering the device with the Tuya Smart app, registering as a developer on the Tuya cloud platform and finally blocking internet access from the device. All in all it works, but it is not fully local only.
 Initially this was the integration method I used, but it had a lot of intermittent connection issues, where then fan just started refusing connectings after a certain amount of time. All in all it will work in some cases, and might be the solution if you are not comfortable physicially modifying your device.
