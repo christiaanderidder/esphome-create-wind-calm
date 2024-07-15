@@ -7,7 +7,7 @@ Most of the information in this guide came from [an issue on velzend's git repo]
 The [CREATE WIND CALM](https://www.create-store.com/nl/kopen-plafondventilatoren-zonder-lamp/82468-wind-calm-plafondventilator-40w-silent-o132-cm.html) (also known as IKOHS) ceiling fan is Tuya based device, which means that it requires cloud connectivity to be able to be controlled remotely.
 
 For Tuya devices there are generally two ways to make the device local only:
-- Using local integrations that speak the tuya protocol like [tuya-local](https://github.com/rospogrigio/localtuya), [local-tuya](https://github.com/make-all/tuya-local), [tinytuya](https://github.com/jasonacox/tinytuya) etc.
+- Using local integrations that speak the tuya protocol like [localtuya](https://github.com/rospogrigio/localtuya), [tuya-local](https://github.com/make-all/tuya-local), [tinytuya](https://github.com/jasonacox/tinytuya) etc.
 - By modding the device to use ESPHome
 
 ## Local integrations
