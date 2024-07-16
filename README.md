@@ -31,7 +31,7 @@ Make sure to flash your ESP-12F with ESPHome before continuing. In my case I use
 The [esphome](esphome) folder in this repository contains the ESPHome yaml for the fan, carefully check this file and make sure you set up the correct secrets and IP addresses.
 
 When opening the motor control unit, it should have a main board with 2 small daughter boards soldered on using through-hole headers. One of these boards has the WBR3 soldered to it, the other is the RF receiver for the remote.
-The WBR3 daughter board can easily be desoldered to make working on replacing the WBR3 a little easier. This is also the perfect time to remove the buzzer (or put a small amount of glue in the top hole) to get rid of the annoyingly loud beeping sound the fan makes.
+The WBR3 daughter board can easily be desoldered to make working on replacing the WBR3 a little easier. This is also the perfect time to remove the speaker (or put a small amount of glue in the top hole) to get rid of the annoyingly loud beeping sound the fan makes.
 
 <img src="https://github.com/user-attachments/assets/ce8caa76-2155-4edd-ba73-7b7db52eb295" width="250" />
 <img src="https://github.com/user-attachments/assets/3d6e0a4e-d0f2-47d6-b297-649c8fe9524f" width="250" />
