@@ -40,13 +40,15 @@ The first image shows the motor control unit with the removed daughter board.
 
 The second image shows the daughter board, the removed WBR3 and pin-compatible ESP-12F.
 
-When placing the ESP12-F the following connections need to be made:
-- TXD to TXD
-- RXD to RXD
-- GPIO15 to GND (set correct boot mode)
-- EN to VCC (always enable)
-- VCC to VCC
-- GND to GND
+When placing the ESP-12F the following connections need to be made:
+| ESP-12F  | Daughter Board | Notes |
+| -------- | -------------- | ----- |
+| TXD | TXD | |
+| RXD | RXD | |
+| GPIO15 | GND | Set correct boot mode |
+| EN | VCC | Always enable |
+| VCC | VCC | |
+| GND | GND | |
 
 Some people opted to desolder and rewire the RF receiver directly to the ESP-12F to keep the remote working as expected. However, I found out that this is not neccesary, the motor control unit already informs the ESP-12F when a change is made using the remote.
 After reassembling everything, the fan should start and the ESPHome dashboard should be reachable over the network.
