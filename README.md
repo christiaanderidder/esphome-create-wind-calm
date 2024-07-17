@@ -43,7 +43,7 @@ The WBR3 daughter board can easily be desoldered to make working on replacing th
 3. Read side of the daughter board, the removed WBR3 and ESP-12F
 4. Wiring from the daughter board to the ESP-12F
 
-As you can see, my first time soldering did not go down so well, as I destroyed the pads on the daughter boards and had to use wires instead, but this is not neccesary if the WBR3 is removed a bit more carefully.
+As you can see, my first time soldering did not go down so well. I destroyed the pads on the daughter boards and had to use wires instead. This is not neccesary if the WBR3 is removed a bit more carefully.
 
 When placing the ESP-12F the following connections need to be made:
 | ESP-12F  | Daughter Board | Notes |
