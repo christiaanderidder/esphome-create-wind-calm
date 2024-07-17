@@ -68,7 +68,7 @@ If the ESPHome integration is configured in home assistant the device should be 
 ## Known Issues
 
 ### Fan speed not working
-Multiple people ran into issues setting the fan speed, because the tuya device does not correctly report all data points to ESPHome on startup. I found out that this was caused by ESPHome not processing all information being sent by the tuya device and managed to fix this by making [a small change to ESPHome](https://github.com/esphome/esphome/pull/6980). The configuration provided in this repository uses a custom fork of ESPHome including this fix for now, the fix is expected to be released in ESPHome 2024.7.
+Multiple people ran into issues setting the fan speed, because the tuya device does not correctly report all data points to ESPHome on startup. I found out that this was caused by ESPHome not processing all information being sent by the tuya device and managed to fix this by making [a small change to ESPHome](https://github.com/esphome/esphome/pull/6980). This fix is available since ESPHome 2024.7, so make sure to use a recent version.
 
 ### Fan timer
 Datapoint 64 can be used to set the countdown timer, the actual countdown is handled by the motor control unit.
