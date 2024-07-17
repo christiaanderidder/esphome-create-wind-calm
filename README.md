@@ -35,10 +35,15 @@ The WBR3 daughter board can easily be desoldered to make working on replacing th
 
 <img src="https://github.com/user-attachments/assets/ce8caa76-2155-4edd-ba73-7b7db52eb295" width="250" />
 <img src="https://github.com/user-attachments/assets/3d6e0a4e-d0f2-47d6-b297-649c8fe9524f" width="250" />
+<img src="https://github.com/user-attachments/assets/be020b66-2fc3-4315-ab36-c84492b434d9" width="250" />
+<img src="https://github.com/user-attachments/assets/8ddb6150-24a2-4d83-b156-de602178a3f9" width="250" />
 
-The first image shows the motor control unit with the removed daughter board.
+1. The motor control unit with the removed daughter board.
+2. Front side of the daughter board, the removed WBR3 and ESP-12F
+3. Read side of the daughter board, the removed WBR3 and ESP-12F
+4. Wiring from the daughter board to the ESP-12F
 
-The second image shows the daughter board, the removed WBR3 and pin-compatible ESP-12F.
+As you can see, my first time soldering did not go down so well, as I destroyed the pads on the daughter boards and had to use wires instead, but this is not neccesary if the WBR3 is removed a bit more carefully.
 
 When placing the ESP-12F the following connections need to be made:
 | ESP-12F  | Daughter Board | Notes |
@@ -46,7 +51,7 @@ When placing the ESP-12F the following connections need to be made:
 | TXD | TXD | |
 | RXD | RXD | |
 | GPIO15 | GND | Set correct boot mode |
-| EN | VCC | Always enable |
+| EN | VCC | Always enable, don't use EN on daughter board |
 | VCC | VCC | |
 | GND | GND | |
 
