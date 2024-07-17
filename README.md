@@ -27,7 +27,7 @@ However, the [WBR3](https://developer.tuya.com/en/docs/iot/wbr3-module-datasheet
 ## Replacing the WBR3 with ESP-12F
 First of all it's important to be aware that there are multiple versions of this fan. Some variants have a dimmable light, while my fan has not. The exact motor control unit and RF remote used also seem to differ between units. This is most likely due to CREATE just using any parts available off the shelve.
 
-Make sure to flash your ESP-12F with ESPHome before continuing. In my case I used a [developer board](https://www.tinytronics.nl/en/development-boards/accessories/adapter-boards/development-board-for-esp8266-wi-fi-module) which makes this very quick and easy without any soldering. 
+Make sure to flash your ESP-12F with ESPHome before continuing. In my case I used a [development board](https://www.tinytronics.nl/en/development-boards/accessories/adapter-boards/development-board-for-esp8266-wi-fi-module) which makes this very quick and easy without any soldering. 
 The [esphome](esphome) folder in this repository contains the ESPHome yaml for the fan, carefully check this file and make sure you set up the correct secrets and IP addresses.
 
 When opening the motor control unit, it should have a main board with 2 small daughter boards soldered on using through-hole headers. One of these boards has the WBR3 soldered to it, the other is the RF receiver for the remote.
