@@ -1,12 +1,4 @@
-external_components:
-  # Use custom tuya fork, can be removed once ESPHome 2024.7 has been released,
-  # which includes https://github.com/esphome/esphome/pull/6980
-  - source:
-      type: git
-      url: https://github.com/christiaanderidder/esphome
-      ref: "tuya-invalid-command-0x22"
-    components: [ tuya ]
-    refresh: 1min
+# Make sure to use ESPHome 2024.7 or above, which includes a fix for this device: https://github.com/esphome/esphome/pull/6980
 
 substitutions:
   friendly_name: Bedroom Ceiling Fan
