@@ -39,8 +39,8 @@ The WBR3 daughter board can easily be desoldered to make working on replacing th
 <img src="https://github.com/user-attachments/assets/8ddb6150-24a2-4d83-b156-de602178a3f9" width="250" />
 
 1. The motor control unit with the removed daughter board.
-2. Front side of the daughter board, the removed WBR3 and ESP-12F
-3. Read side of the daughter board, the removed WBR3 and ESP-12F
+2. Rear side of the daughter board, the removed WBR3 and ESP-12F
+3. Front side of the daughter board, the removed WBR3 and ESP-12F
 4. Wiring from the daughter board to the ESP-12F
 
 When placing the ESP-12F the following connections need to be made:
@@ -53,11 +53,10 @@ When placing the ESP-12F the following connections need to be made:
 | VCC | VCC | |
 | GND | GND | |
 
-
-As you can see, my first time soldering did not go down so well. I destroyed the pads on the daughter boards and had to use wires instead. This is not neccesary if the WBR3 is removed a bit more carefully.
-In the pictures a wire from GPIO12 can also be seen, but this one is not neccesary, I added it in case I would decide to rewire the RF receiver.
-
-Some people opted to desolder and rewire the RF receiver directly to the ESP-12F to keep the remote working as expected. However, I found out that this is not neccesary, the motor control unit already informs the ESP-12F when a change is made using the remote.
+As you can see, my first time soldering did not go down so well. I destroyed the pads on the daughter boards and had to use wires instead.
+This is not neccesary if the WBR3 is removed a bit more carefully.
+In the pictures a wire from GPIO12 can also be seen, but this one is not neccesary, I added it in case I would have to desolder the RF receiver directly to the ESP-12F to keep the remote working as expected.
+However, I found out that this is not neccesary, the motor control unit already informs the ESP-12F when a change is made using the remote as long are you are running ESPHome with a small fix (see [below](#fan-speed-not-working)).
 After reassembling everything, the fan should start and the ESPHome dashboard should be reachable over the network.
 
 ## Home Assitant
