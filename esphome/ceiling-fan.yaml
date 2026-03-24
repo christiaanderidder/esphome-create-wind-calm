@@ -98,6 +98,10 @@ light:
 switch:
   - platform: restart
     name: "Restart"
+  # Controls the beeping sound
+  - platform: "tuya"
+    name: "Beep"
+    switch_datapoint: 66
 
 binary_sensor:
   - platform: status
