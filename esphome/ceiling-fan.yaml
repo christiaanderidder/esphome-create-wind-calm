@@ -30,6 +30,7 @@ wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   fast_connect: on # Don't scan networks, connect straight away
+  min_auth_mode: WPA2
   manual_ip:
     static_ip: 10.0.20.11
     gateway: 10.0.0.1
