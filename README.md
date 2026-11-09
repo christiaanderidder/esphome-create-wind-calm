@@ -79,6 +79,6 @@ Since this is a hardware issue with the motor control unit, it's probably best t
 ### Light cycles between 3 light temperatures
 When the light is turned off and turned on again quickly, it will automatically cycle to the next of three different light temperatures. This can be extremely annoying, especially considering the intesity of the two brightest settings.
 Sadly this is a feature that is baked directly into the LED board and not in any way controllable with this ESPHome conversion. However, it is possible to swap the LED panel for another one that only offers a single shade of white light.
-I've personally used the following light as a replacement: [AliExpress](https://www.aliexpress.com/item/1005004103063784.html?spm=a2g0o.order_list.order_list_main.11.a91c79d2zs2K1w).
+~I've personally used the following light as a replacement: [AliExpress](https://www.aliexpress.com/item/1005004103063784.html?spm=a2g0o.order_list.order_list_main.11.a91c79d2zs2K1w).
 This light offers just a single shade of warm white light and just requires swapping the original lights magnetic legs, so there is enough space for the wires underneath.
-Any comparable magnetic LED of around 11-12cm should do.
+Any comparable magnetic LED of around 11-12cm should do.~ See: https://github.com/christiaanderidder/esphome-create-wind-calm/issues/6
